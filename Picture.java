@@ -69,6 +69,7 @@ public class Picture
     {
         sky.changeColor("black");
         mountain1.changeColor("black");
+        mountain2.changeColor("black");
         sun.changeColor("black");
     }
 
