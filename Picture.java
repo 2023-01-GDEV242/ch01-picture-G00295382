@@ -6,8 +6,9 @@
  *
  * This class was written as an early example for teaching Java with BlueJ.
  * 
- * @author  Michael Kšlling and David J. Barnes
- * @version 2016.02.29
+ * @author Bradley Risack
+ * created using template by Michael Kšlling and David J. Barnes
+ * @version 2023.01.30
  */
 public class Picture
 {
