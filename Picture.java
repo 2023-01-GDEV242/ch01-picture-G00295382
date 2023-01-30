@@ -6,14 +6,14 @@
  *
  * This class was written as an early example for teaching Java with BlueJ.
  * 
- * @author  Michael Kšlling and David J. Barnes
+ * @author  Michael KÅ¡lling and David J. Barnes
  * @version 2016.02.29
  */
 public class Picture
 {
     private Square sky;
-    private Square window;
-    private Triangle roof;
+    private Triangle mountain1;
+    private Triangle mountain2;
     private Circle sun;
     private boolean drawn;
 
@@ -23,8 +23,8 @@ public class Picture
     public Picture()
     {
         sky = new Square();
-        window = new Square();
-        roof = new Triangle();  
+        mountain1 = new Triangle(); 
+        mountain2 = new Triangle();
         sun = new Circle();
         drawn = false;
     }
@@ -35,24 +35,26 @@ public class Picture
     public void draw()
     {
         if(!drawn) {
+            sky.changeColor("blue");
             sky.changeSize(20000);
-            sky.changeColor("Blue");
-            sky.moveHorizontal(-160);
+            sky.moveHorizontal(-400);
+            sky.moveVertical(-200);
             sky.makeVisible();
             
-            window.changeColor("black");
-            window.moveHorizontal(-160);
-            window.moveVertical(40);
-            window.changeSize(40);
-            window.makeVisible();
-    
-            roof.changeSize(60, 180);
-            roof.moveHorizontal(20);
-            roof.moveVertical(-60);
-            roof.makeVisible();
+            mountain1.changeColor("green");
+            mountain1.changeSize(100, 360);
+            mountain1.moveHorizontal(-30);
+            mountain1.moveVertical(60);
+            mountain1.makeVisible();
+            
+            mountain2.changeColor("green");
+            mountain2.changeSize(100, 360);
+            mountain2.moveHorizontal(140);
+            mountain2.moveVertical(60);
+            mountain2.makeVisible();
     
             sun.changeColor("yellow");
-            sun.moveHorizontal(100);
+            sun.moveHorizontal(-170);
             sun.moveVertical(-40);
             sun.changeSize(80);
             sun.makeVisible();
@@ -66,8 +68,7 @@ public class Picture
     public void setBlackAndWhite()
     {
         sky.changeColor("black");
-        window.changeColor("white");
-        roof.changeColor("black");
+        mountain1.changeColor("black");
         sun.changeColor("black");
     }
 
@@ -77,8 +78,8 @@ public class Picture
     public void setColor()
     {
         sky.changeColor("blue");
-        window.changeColor("black");
-        roof.changeColor("green");
+        mountain1.changeColor("green");
+        mountain2.changeColor("green");
         sun.changeColor("yellow");
     }
 }
